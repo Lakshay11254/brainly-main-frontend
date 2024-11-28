@@ -5,10 +5,27 @@ import ShareIcon from "./icons/ShareIcon";
 
 export default function App() {
   return (
-   <>
-   <Button variant="primary" startIcon={<PlusIcon/>} text="Add Content"/>
-   <Button variant="secondary" startIcon={<ShareIcon/>} text="Share Brain"/>
-   <Card/>
-   </>
-  )
+    <div className="p-4">
+      <div className="flex justify-end gap-4">
+        <Button variant="primary" startIcon={<PlusIcon />} text="Add Content" />
+        <Button
+          variant="secondary"
+          startIcon={<ShareIcon />}
+          text="Share Brain"
+        />
+      </div>
+      <div className="flex gap-4">
+        <Card
+          type="twitter"
+          link="https://x.com/elonmusk/status/1812258574049157405"
+          title="Elon Musk"
+        />
+        <Card
+          type="youtube"
+          link="https://www.youtube.com/watch?v=lK1SNtOlty8"
+          title="Wavy"
+        />
+      </div>
+    </div>
+  );
 }
