@@ -7,7 +7,7 @@ import ShareIcon from "./icons/ShareIcon";
 import Sidebar from "./components/Sidebar";
 
 export default function App() {
-  const [modalOpen, setmodalOpen] = useState(true);
+  const [modalOpen, setmodalOpen] = useState(false);
 
   return <div>
     <Sidebar/>
