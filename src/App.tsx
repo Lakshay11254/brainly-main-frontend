@@ -1,15 +1,27 @@
+import { useState } from "react";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import CreateContentModal from "./components/CreateContentModal";
 import PlusIcon from "./icons/PlusIcon";
 import ShareIcon from "./icons/ShareIcon";
+import Sidebar from "./components/Sidebar";
 
 export default function App() {
-  return (
-    <div className="p-4">
-      <CreateContentModal open={true}/>
+  const [modalOpen, setmodalOpen] = useState(true);
+
+  return <div>
+    <Sidebar/>
+      <div className="p-4 ml-72 min-h-screen bg-gray-100 border-2">
+         
+
+      <CreateContentModal
+        open={modalOpen}
+        onClose={() => {
+          setmodalOpen(false);
+        }}
+      />
       <div className="flex justify-end gap-4">
-        <Button variant="primary" startIcon={<PlusIcon />} text="Add Content" />
+        <Button onClick={() => setmodalOpen(true)} variant="primary" startIcon={<PlusIcon />} text="Add Content" />
         <Button
           variant="secondary"
           startIcon={<ShareIcon />}
@@ -28,6 +40,8 @@ export default function App() {
           title="Wavy"
         />
       </div>
-    </div>
-  );
+      </div>
+    
+      </div>
+
 }
