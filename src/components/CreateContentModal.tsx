@@ -1,6 +1,8 @@
 // import { useState } from "react"
 
 import CrossIcon from "../icons/CrossIcon"
+import Button from "./Button"
+import Input from "./Input"
 
 
 function CreateContentModal({ open, onClose   }) {
@@ -18,21 +20,14 @@ function CreateContentModal({ open, onClose   }) {
                 <Input  placeholder="Title"/>
                 <Input  placeholder="Link"/>
             </div>
+            <div>
+                <Button variant="primary" text="Submit"/>
+            </div>
         </span>
     </div>
     </div>
     }
 </div>
+}
 
-function Input({onChange, placeholder} : {onChange: () => void})
-{
-    return <div>
-        <input placeholder={placeholder} 
-        type="text" 
-        className="px-4 py-2 border rounded"
-        onChange={onChange}
-        />
-        </div>
-}
-}
 export default CreateContentModal

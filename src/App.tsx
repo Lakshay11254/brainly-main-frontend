@@ -1,10 +1,12 @@
-import Dashboard from "./pages/dashboard";
+// import Dashboard from "./pages/dashboard";
+import Signup from "./pages/Signup";
 
 
 export default function App() {
     return (
         <div>
-            <Dashboard/>
+            {/* <Dashboard/> */}
+            <Signup/>
         </div>
     )
 
