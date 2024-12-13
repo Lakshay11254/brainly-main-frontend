@@ -1,5 +1,5 @@
 import Logo from "../icons/Logo"
-import XIcon from "../icons/xIcon"
+import XIcon from "../icons/XIcon"
 import YoutubeIcon from "../icons/YoutubeIcon"
 import SidebarItem from "./SidebarItem"
 
