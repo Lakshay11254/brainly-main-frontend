@@ -1,11 +1,16 @@
+interface InputProps {
+    placeholder: string;
+    ref?: any;
+}
 
-export default function Input({onChange, placeholder} : {placeholder: string, onChange: () => void})
+export default function Input({ placeholder, ref} : InputProps)
 {
     return <div>
-        <input placeholder={placeholder} 
+        <input
+        ref = {ref}
+        placeholder={placeholder} 
         type="text" 
-        className="px-4 py-2 border rounded"
-        onChange={onChange}
+        className="px-4 py-2 border rounded m-2"
         />
         </div>
 }

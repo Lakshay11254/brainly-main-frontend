@@ -5,7 +5,7 @@ import Button from "./Button"
 import Input from "./Input"
 
 
-function CreateContentModal({ open, onClose   }) {
+function CreateContentModal({ open, onClose }) {
   return  <div>
   {  open && <div className="w-screen h-screen fixed top-0 left-0 bg-black opacity-40 ">
     <div className="flex flex-col justify-center">
